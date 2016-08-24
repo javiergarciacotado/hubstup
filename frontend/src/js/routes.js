@@ -4,11 +4,13 @@ import App from '../components/App';
 import HomePage from '../components/home/HomePage';
 import AboutPage from '../components/about/AboutPage';
 import StartupsPage from '../components/startup/StartupsPage';
+import ComingSoon from '../components/ComingSoon';
 
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
     <Route path="startups" component={StartupsPage} />
     <Route path="about" component={AboutPage} />
+    <Route path="comingsoon" component={ComingSoon} />
   </Route>
 );
