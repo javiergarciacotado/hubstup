@@ -8,8 +8,7 @@ class App extends React.Component {
     $(function() {
      let images = ['glenfinnan.jpg', 'otters.jpg', 'quiraing.jpg', 'quiraing2.jpg',
        'skye.jpg', 'skye2.jpg', 'stoer.jpg', 'storr.jpg'];
-     //$('#background').css({'background-image': 'url(../images/' + images[Math.floor(Math.random() * images.length)] + ')'});
-     let backImage = require('../images/storr.jpg');
+     const backImage = require('../images/'+ images[Math.floor(Math.random() * images.length)]);
      $('#background').css({'background-image': 'url(' + backImage + ')'});
     });
   }
