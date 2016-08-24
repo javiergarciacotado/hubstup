@@ -32,7 +32,10 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract("style", "css!sass")},
+      //{test: /\.scss$/, loader: ExtractTextPlugin.extract("style", "css!sass")},
+      {test: /(\.css|\.scss)$/, loaders: ['style', 'css', 'sass']},
+      {test: /\.(jpe?g|png|gif)$/i, loader: 'file?name=[name].[ext]'},
+      {test: /\.ico$/, loader: 'file?name=[name].[ext]'},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},

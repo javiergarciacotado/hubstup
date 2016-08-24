@@ -1,72 +1,36 @@
+//This component handles the App template used on every page
 import React, {PropTypes} from 'react';
-//import Header from './Header';
-//import { Link, IndexLink } from 'react-router';
-import flipclock from '../../node_modules/flipclock/compiled/flipclock.min';
+import Header from './common/Header';
 
 class App extends React.Component {
 
   componentDidMount() {
-    $(function () {
-
-      let clock;
-      let currentDate = new Date();
-      let futureDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours() + 48);
-      let diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-      //clock = $('#clock').FlipClock(diff).then(() => {countdown:true;});
-      clock = $('#clock').FlipClock(diff, {
-        countdown:true
-      });
+    $(function() {
+     let images = ['glenfinnan.jpg', 'otters.jpg', 'quiraing.jpg', 'quiraing2.jpg',
+       'skye.jpg', 'skye2.jpg', 'stoer.jpg', 'storr.jpg'];
+     //$('#background').css({'background-image': 'url(../images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+     let backImage = require('../images/storr.jpg');
+     $('#background').css({'background-image': 'url(' + backImage + ')'});
     });
   }
 
   render() {
     return (
-      <div id="coming-soon" className="dark">
+      <div className="container-fluid">
+        <div className="header">
+          <Header />
+        </div>
+        <div id="background"></div>
         <div className="container">
-          <div className="container">
-            <div className="row info">
-              <div className="col-md-12">
-                <h1><a href="#">HubStup</a></h1>
-                <h3>We're launching very soon.</h3>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-12">
-                <div id="countdown">
-                  <div id="clock" className="flip-clock-wrapper"></div>
-                </div>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-12">
-                <form className="form-inline" role="form">
-                  <div className="form-group">
-                    <label className="sr-only" htmlFor="exampleInputEmail2">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail2"
-                           placeholder="Enter your email"/>
-                  </div>
-                  <a href="index.html" className="button">Notify me</a>
-                </form>
-              </div>
-            </div>
-
-            <div className="row social">
-              <div className="col-md-12">
-                <a className="ion" href="#"><span className="ion-social-twitter"></span></a>
-                <div className="tm">Follow up @hubstup</div>
-              </div>
-            </div>
-          </div>
+          {this.props.children}
         </div>
       </div>
-    );
+      );
+    }
   }
-}
 
-App.propTypes = {
-  children: PropTypes.object.isRequired
-};
+  App.propTypes = {
+    children: PropTypes.object.isRequired
+  };
 
-export default App;
+  export default App;
