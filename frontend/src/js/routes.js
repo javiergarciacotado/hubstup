@@ -9,6 +9,6 @@ export default(
   <Route path="/" name="app" component={App}>
     <Route path="/signin" name="signin" component={Signin} />
     <Route path="/signup" name="signup" component={Signup} />
-    <Route path="*" name="not-found" component={NotFound} />
+    <Route path="not-found" name="not-found" component={NotFound} />
   </Route>
 );
