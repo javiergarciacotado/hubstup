@@ -67,6 +67,10 @@ body {
     margin-bottom: 40px;
   }
 
+  input[type="text"].form-control{
+    height: 33px;
+  }
+
   .table-background{
     margin: 10px;
     background-color: rgba(238, 238, 238, 0.5);
