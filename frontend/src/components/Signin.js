@@ -42,7 +42,7 @@ const Signin = () => {
             </div>
             <div className="already-account">
               Don't have an account?
-              <Link to="/">Create one here</Link>
+              <Link to="/signup">Create one here</Link>
             </div>
           </div>
         </div>
