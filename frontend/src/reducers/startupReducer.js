@@ -1,13 +1,9 @@
+import * as types from '../actions/actionTypes';
+
 export default function startupReducer(state = [], action) {
   switch (action.type) {
-    case 'CREATE_STARTUP':
-      /*
-      state.push(action.startup);
-      return state;
-      */
-      return [...state, //ES6 spread operator
-        Object.assign({}, action.startup)
-      ];
+    case types.LOAD_STARTUPS_SUCCESS:
+      return action.startups;
     default:
       return state;
 

@@ -3,6 +3,8 @@ $icon-font-path: "../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 $navbar-default-bg: #4CAF50;
 $navbar-default-link-color: #fff;
 $jumbotron-bg: rgba(165, 214, 167, 0.8);
+$panel-bg: rgba(238, 238, 238, 0.7);
+$panel-default-heading-bg: rgba(238, 238, 238, 0.8);
 
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap-compass.scss';
@@ -70,10 +72,10 @@ body {
   input[type="text"].form-control{
     height: 33px;
   }
-
-  .table-background{
-    margin: 10px;
-    background-color: rgba(238, 238, 238, 0.5);
+  .table{
+    //margin: 10px;
+    //background-color: rgba(238, 238, 238, 0.5);
+    text-align: left;
   }
 }
 

@@ -2,38 +2,11 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as startupActions from '../../actions/startupActions';
+import StartupList from './StartupList';
 
 class StartupsPage extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    this.state = {
-      startup: {
-        name: "",
-        url: ""
-      }
-    };
-    //REACT does not automatically bind any ES6 classes, so without the following
-    //lines, "this" points to input instead of StartupsPage Component
-    this.onNameChange = this.onNameChange.bind(this);
-    this.onUrlChange = this.onUrlChange.bind(this);
-    this.onClickSave = this.onClickSave.bind(this);
-  }
-
-  onNameChange(event) {
-    const startup = this.state.startup;
-    startup.name = event.target.value;
-    this.setState({startup: startup});
-  }
-
-  onUrlChange(event) {
-    const startup = this.state.startup;
-    startup.url = event.target.value;
-    this.setState({startup: startup});
-  }
-
-  onClickSave() {
-    this.props.actions.createStartup(this.state.startup);
   }
 
   startupRow(startup, index){
@@ -41,23 +14,13 @@ class StartupsPage extends React.Component {
   }
 
   render() {
+    const {startups} = this.props;
     return (
-      <div>
-        <h1>Startups</h1>
-        {this.props.startups.map(this.startupRow)}
-        <h2>Add Startup</h2>
-        <input
-          type="text"
-          onChange={this.onNameChange}
-          value={this.state.startup.name} />
-        <input
-          type="text"
-          onChange={this.onUrlChange}
-          value={this.state.startup.url} />
-        <input
-          type="submit"
-          value="Save"
-          onClick={this.onClickSave} />
+      <div className="jumbotron">
+        <div className="panel panel-default">
+          <div className="panel-heading"><h2>Startups</h2></div>
+          <StartupList startups = {startups} />
+        </div>
       </div>
     );
   }

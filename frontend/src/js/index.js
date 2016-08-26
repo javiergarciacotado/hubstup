@@ -6,11 +6,13 @@ import { Provider } from 'react-redux';
 import routes from './routes';
 import App from '../components/App';
 import configureStore from '../store/configureStore';
+import {loadStartups} from '../actions/startupActions';
 
 import '../scss/main.scss';
 import '../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js';
 
 const store = configureStore();
+store.dispatch(loadStartups()); 
 
 render(
   <Provider store={store}>
