@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
+//import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 
 const Header = () => {
   return (
@@ -17,9 +18,9 @@ const Header = () => {
 
         <div className="collapse navbar-collapse" id="js-navbar-collapse">
           <ul className="nav navbar-nav">
-            <li className="active"><IndexLink activeClassName="active" to="/">Home</IndexLink></li>
-            <li><Link activeClassName="active" to="/about">About</Link></li>
-            <li><Link activeClassName="active" to="/startups">Startups</Link></li>
+            <li className="active"><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
+            <li><Link to="/about" activeClassName="active">About</Link></li>
+            <li><Link to="/startups" activeClassName="active">Startups</Link></li>
           </ul>
         </div>
       </div>
