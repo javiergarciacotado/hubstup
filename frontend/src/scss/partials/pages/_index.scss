@@ -1,4 +1,4 @@
-@import "../snippets/features";
+@import "snippets/features";
 
 @include keyFrame(slideLeft) {
 	0% {
@@ -53,7 +53,7 @@
 					margin: auto 0;
 					width: 19px;
 					height: 58px;
-					background: url("../../images/slide-arrow.png") no-repeat;
+					background: url("/images/slide-arrow.png") no-repeat;
 					left: 30px;
 
 					@include transform(rotate(180deg));
@@ -70,7 +70,7 @@
 					margin: auto 0;
 					width: 19px;
 					height: 58px;
-					background: url("../../images/slide-arrow.png") no-repeat;
+					background: url("/images/slide-arrow.png") no-repeat;
 					right: 30px;
 				}
 			}
@@ -91,7 +91,7 @@
 				background: #a2a2a2;
 				border-radius: 50%;
 				margin: 0 3px;
-				
+
 				&.active {
 					background: #fff;
 				}
@@ -117,7 +117,7 @@
 				height: 100%;
 				width: 100%;
 				padding-top: 90px;
-				
+
 				&.active {
 					opacity: 1;
 					filter: alpha(opacity=100);
@@ -127,7 +127,7 @@
 				&.next {
 					.bg {
 						@media(min-width: 768px) {
-							@include animation(slideLeft 700ms linear);	
+							@include animation(slideLeft 700ms linear);
 						}
 					}
 					z-index: 90;
@@ -330,7 +330,7 @@
 					.video-wrapper {
 						text-align: center;
 						margin-top: 50px;
-						
+
 						@media(max-width: 767px) {
 							margin-top: 25px;
 						}
@@ -344,7 +344,7 @@
 							   -moz-animation-duration: 1.2s;
 							     -o-animation-duration: 1.2s;
 							        animation-duration: 1.2s;
-							
+
 							img {
 								max-width: 280px;
 								cursor: pointer;
@@ -496,7 +496,7 @@
 		margin-top: 110px;
 		padding-top: 45px;
 		padding-bottom: 70px;
-		
+
 		.header {
 			text-align: center;
 			font-family: $lato;
@@ -522,7 +522,7 @@
 		}
 		.charts {
 			margin-top: 45px;
-			
+
 			@media (max-width: 991px) {
 				margin-top: 10px;
 			}
@@ -530,7 +530,7 @@
 			.chart {
 				background-color: #fff;
 				border: 1px solid #E6E6E6;
-				border-radius: 5px;			
+				border-radius: 5px;
 				box-shadow: 0px 0px 2px 0px rgba(181, 181, 181, 0.3);
 				padding: 20px 40px;
 				position: relative;
@@ -583,7 +583,7 @@
 					.quantity {
 						margin-top: 15px;
 					}
-				}				
+				}
 
 				.quantity {
 					text-align: center;
@@ -684,7 +684,7 @@
 						color: #555;
 					}
 				}
-				strong {					
+				strong {
 					color: #b6b6b6;
 					font-size: 16px;
 					@include transition(color 0.2s linear);
@@ -722,7 +722,7 @@
 				margin-bottom: 45px;
 			}
 
-			.quote {			
+			.quote {
 				font-size: 13px;
 				color: #3D3D3D;
 				line-height: 24px;

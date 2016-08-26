@@ -11,7 +11,12 @@
 /* config variables */
 @import "config";
 
+/* layout */
+@import "partials/layout";
+
 /* pages */
-@import "pages/404";
-@import "pages/coming_soon";
+@import "partials/pages/index";
+@import "partials/pages/signup";
+@import "partials/pages/404";
+@import "partials/pages/coming_soon";
 
