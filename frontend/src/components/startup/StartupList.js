@@ -8,7 +8,9 @@ const StartupList = ({startups}) => {
       <tr>
         <th>&nbsp;</th>
         <th>Name</th>
+        <th>Industry</th>
         <th>URL</th>
+        <th>keywords</th>
       </tr>
       </thead>
       <tbody>

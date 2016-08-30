@@ -1,16 +1,19 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {browserHistory} from 'react-router';
 import * as startupActions from '../../actions/startupActions';
 import StartupList from './StartupList';
 
 class StartupsPage extends React.Component {
   constructor(props, context) {
     super(props, context);
+
+    this.redirectToAddStartupPage = this.redirectToAddStartupPage.bind(this);
   }
 
-  startupRow(startup, index){
-    return <div key={index}>{startup.name} - {startup.url}</div>;
+  redirectToAddStartupPage() {
+    browserHistory.push('startup');
   }
 
   render() {
@@ -19,6 +22,11 @@ class StartupsPage extends React.Component {
       <div className="jumbotron">
         <div className="panel panel-default">
           <div className="panel-heading"><h2>Startups</h2></div>
+          <input
+            type="submit"
+            value="Add Startup"
+            className="btn btn-primary"
+            onClick={this.redirectToAddStartupPage} />
           <StartupList startups = {startups} />
         </div>
       </div>
