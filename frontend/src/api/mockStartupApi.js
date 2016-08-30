@@ -8,31 +8,49 @@ const startups = [
     id: "sctyl",
     name: "Scytl",
     url: "http://www.scytl.com",
-    watchHref: "https://vimeo.com/51684209"
+    watchHref: "https://vimeo.com/51684209",
+    keywords:  [ "eDemocracy", "product", "results consolidation", "voting", "electronic voting" ],
+    industryId: "ind10"
   },
   {
     id: "typeform",
     name: "Typeform",
     url: "http://www.typeform.com",
-    watchHref: "https://vimeo.com/51684209"
+    watchHref: "https://vimeo.com/51684209",
+    keywords:  [ "surveys", "forms", "product" ],
+    industryId: "ind4"
   },
   {
     id: "cartodb",
     name: "CartoDB",
     url: "http://www.cartodb.com",
-    watchHref: "https://vimeo.com/51684209"
+    watchHref: "https://vimeo.com/51684209",
+    keywords: ["GIS", "maps", "big data"],
+    industryId: "ind2"
   },
   {
     id: "ofertia",
     name: "Ofertia",
     url: "http://www.ofertia.com",
-    watchHref: "https://vimeo.com/51684209"
+    watchHref: "https://vimeo.com/51684209",
+    keywords: ["offers", "retail"],
+    industryId: "ind1"
   },
   {
     id: "kassisto",
     name: "Kassisto",
     url: "http://www.kassisto.com",
-    watchHref: "https://vimeo.com/51684209"
+    watchHref: "https://vimeo.com/51684209",
+    keywords: ["IA", "virtual assistants", "bots", "machine learning"],
+    industryId: "ind10"
+  },
+  {
+    id: "world_sensing",
+    name: "World Sensing",
+    url: "http://www.world_sensing.com",
+    watchHref: "https://vimeo.com/51684209",
+    keywords: ["IoT", "big data", "beacons"],
+    industryId: "ind8"
   }
 ];
 
@@ -47,6 +65,7 @@ const generateId = (startup) => {
 
 class StartupApi {
   static getAllStartups() {
+    
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(Object.assign([], startups));
@@ -55,6 +74,7 @@ class StartupApi {
   }
 
   static saveStartup(startup) {
+    startup = Object.assign({}, startup);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         // Simulate server-side validation
@@ -74,8 +94,8 @@ class StartupApi {
           //startup.watchHref = `http://www.pluralsight.com/courses/${course.id}`;
           startups.push(startup);
         }
-
-        resolve(Object.assign({}, startup));
+        //resolve(Object.assign({}, startup));
+        resolve(startup);
       }, delay);
     });
   }
