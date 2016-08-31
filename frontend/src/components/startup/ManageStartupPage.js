@@ -4,8 +4,9 @@ import {bindActionCreators} from 'redux';
 import toastr from 'toastr';
 import * as startupActions from '../../actions/startupActions';
 import StartupForm from './StartupForm';
+import {industriesFormattedForDropdown} from '../../selectors/selectors';
 
-class ManageStartupPage extends React.Component {
+export class ManageStartupPage extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -39,8 +40,25 @@ class ManageStartupPage extends React.Component {
     this.context.router.push('/startups');
   }
 
+  startupFormIsValid() {
+    let formIsValid = true;
+    let errors = {};
+
+    if (this.state.startup.name.length < 3) {
+      errors.name = 'Name must be at least 3 characters';
+      formIsValid = false;
+    }
+
+    this.setState({errors: errors});
+    return formIsValid;
+  }
+
   saveStartup(event) {
     event.preventDefault();
+    if (!this.startupFormIsValid()) {
+      return;
+    }
+
     this.setState({saving: true});
     this.props.actions.saveStartup(this.state.startup)
       .then(() => this.redirect())
@@ -100,16 +118,9 @@ function mapStateToProps(state, ownProps) {
     startup = getStartupById(state.startups, startupId);
   }
 
-  const industriesFormattedForDropdown = state.industries.map(industry => {
-    return {
-      value: industry.id,
-      text: industry.name
-    };
-  });
-
   return {
     startup: startup,
-    industries: industriesFormattedForDropdown
+    industries: industriesFormattedForDropdown(state.industries)
   };
 }
 
