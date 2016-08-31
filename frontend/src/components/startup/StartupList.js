@@ -3,7 +3,7 @@ import StartupListRow from './StartupListRow';
 
 const StartupList = ({startups}) => {
   return (
-    <table className="table">
+    <table className="table left_align">
       <thead>
       <tr>
         <th>&nbsp;</th>

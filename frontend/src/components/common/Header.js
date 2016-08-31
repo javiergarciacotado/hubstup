@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
-//import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 import LoadingDots from './LoadingDots';
 
 
 const Header = ({loading}) => {
+  /*
   return (
     <div className="navbar navbar-default" role="navigation">
       <div className="container">
@@ -28,6 +28,47 @@ const Header = ({loading}) => {
         </div>
       </div>
     </div>
+  );
+  */
+  return(
+    <header className="navbar navbar-default" role="banner">
+      <div className="container">
+        <div className="navbar-header">
+          <button className="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span className="icon-bar" />
+            <span className="icon-bar" />
+            <span className="icon-bar" />
+          </button>
+          <IndexLink to="/" className="navbar-brand">HubStup</IndexLink>
+        </div>
+        <nav className="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul className="nav navbar-nav navbar-right">
+            <li>
+              <Link to="/startups">
+                Startups Directory
+              </Link>
+            </li>
+            <li className="dropdown">
+              <Link to="/" className="dropdown-toggle" data-toggle="dropdown">
+                Page 2
+                <i className="fa fa-chevron-down" />
+              </Link>
+              <ul className="dropdown-menu">
+                <li><Link to="/">Page 2.1</Link></li>
+                <li><Link to="/">Page 2.2</Link></li>
+              </ul>
+            </li>
+            <li><Link to="#">Blog</Link></li>
+            <li>
+              <Link to="/signin">Sign in</Link>
+            </li>
+            <li>
+              <Link to="/signup" className="signup visible-md visible-lg">Sign up</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 

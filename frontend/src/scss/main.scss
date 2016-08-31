@@ -54,12 +54,6 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   padding: 20px;
-  /*
-  .btn {
-    background-color: #E8F5E9;
-    color: #1B5E20;
-  }
-  */
   h2{
     margin: 0;
     color: #1B5E20;
@@ -74,15 +68,17 @@ body {
   }
 
   .table{
-    //margin: 10px;
-    //background-color: rgba(238, 238, 238, 0.5);
-    text-align: left;
-
     th{
-      //background-color: rgba(238, 238, 238, 0.5);
       color: #1B5E20;
     }
   }
+}
+
+.left_align {
+  text-align: left;
+}
+.clear {
+  background-color: rgba(238, 238, 238, 0.8);
 }
 
 /* Supporting marketing content */
