@@ -22,7 +22,7 @@
     "start": "npm-run-all --parallel test:watch eslint:watch open",
     "eslint": "esw webpack.config.* src tools",
     "eslint:watch": "npm run eslint -- --watch",
-    "test": "mocha --compilers js:babel-core/register --reporter progress \"test/**/*.js\"",
+    "test": "mocha --reporter progress tools/testSetup.js \"test/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "clean": "node_modules/.bin/rimraf ./target && mkdir target",
     "html": "babel-node tools/cpHtml.js",

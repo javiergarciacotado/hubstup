@@ -11,7 +11,7 @@ const StartupForm = ({startup, errors, allIndustries, onSave, onChange, saving})
         label="Name"
         value={startup.name}
         onChange={onChange}
-        error={errors.title} />
+        error={errors.name} />
 
       <SelectInput
         name="industryId"
@@ -25,7 +25,7 @@ const StartupForm = ({startup, errors, allIndustries, onSave, onChange, saving})
       <TextInput
         name="keywords"
         label="Keywords"
-        value={startup.keywords.toString()}
+        value={startup.keywords ? startup.keywords.toString() : ""}
         onChange={onChange}
         error={errors.keywords} />
 
