@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import '../../scss/_signup.scss';
+
 const Signup = () => {
   return (
     <div id="signup" className="jumbotron clear left_align">
@@ -50,7 +52,7 @@ const Signup = () => {
               </div>
             </div>
             <div className="already-account">
-              Already have an account?
+              Already have an account? <br />
               <Link to="/signin">Sign in here</Link>
             </div>
           </div>
