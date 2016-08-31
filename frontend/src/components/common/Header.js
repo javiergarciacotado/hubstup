@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
-//import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 import LoadingDots from './LoadingDots';
 
 
@@ -44,10 +43,9 @@ const Header = ({loading}) => {
         </div>
         <nav className="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul className="nav navbar-nav navbar-right">
-            <li className="dropdown">
+            <li>
               <Link to="/startups">
                 Startups Directory
-                <i className="fa fa-chevron-down" />
               </Link>
             </li>
             <li className="dropdown">
@@ -60,14 +58,9 @@ const Header = ({loading}) => {
                 <li><Link to="/">Page 2.2</Link></li>
               </ul>
             </li>
-            <li className="dropdown">
-              <Link to="#" className="dropdown-toggle" data-toggle="dropdown">
-                Blog
-                <i className="fa fa-chevron-down"></i>
-              </Link>
-            </li>
+            <li><Link to="#">Blog</Link></li>
             <li>
-              <Link to="/signin" className="navbar-link">Sign in</Link>
+              <Link to="/signin">Sign in</Link>
             </li>
             <li>
               <Link to="/signup" className="signup visible-md visible-lg">Sign up</Link>
