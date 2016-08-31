@@ -6,6 +6,9 @@ import AboutPage from '../components/about/AboutPage';
 import StartupsPage from '../components/startup/StartupsPage';
 import ComingSoon from '../components/ComingSoon';
 import ManageStartupPage from '../components/startup/ManageStartupPage';
+import NotFoundPage from '../components/404';
+import SignIn from '../components/auth/Signin';
+import SignUp from '../components/auth/Signup';
 
 export default (
   <Route path="/" component={App}>
@@ -15,5 +18,9 @@ export default (
     <Route path="startup/:id" component={ManageStartupPage} />
     <Route path="about" component={AboutPage} />
     <Route path="comingsoon" component={ComingSoon} />
+    <Route path="signin" component={SignIn} />
+    <Route path="signup" component={SignUp} />
+    <Route path="*" component={NotFoundPage}/>
+
   </Route>
 );
