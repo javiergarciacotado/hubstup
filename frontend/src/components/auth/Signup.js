@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import '../../scss/_signup.scss';
+//import '../../scss/_signup.scss';
 
 const Signup = () => {
   return (
