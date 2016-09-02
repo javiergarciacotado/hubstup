@@ -22,7 +22,7 @@
     "start": "npm-run-all --parallel test:watch eslint:watch open",
     "eslint": "esw webpack.config.* src tools",
     "eslint:watch": "npm run eslint -- --watch",
-    "test": "mocha --compilers js:babel-core/register --reporter progress \"test/**/*.js\"",
+    "test": "mocha --reporter progress tools/testSetup.js \"test/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "clean": "node_modules/.bin/rimraf ./target && mkdir target",
     "html": "babel-node tools/cpHtml.js",
@@ -31,12 +31,13 @@
     "postbuild": "babel-node tools/server.js"
   },
   "dependencies": {
-    "bootstrap": "3.3.6",
+    "bootstrap-sass": "^3.3.7",
     "jquery": "2.2.3",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
     "react-router": "2.4.0",
+    "react-router-bootstrap": "^0.23.1",
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
