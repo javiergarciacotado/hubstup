@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 import Header from './common/Header';
 import flipclock from '../../node_modules/flipclock/compiled/flipclock.min';
 /* eslint-disable */
-import '../scss/coming_soon/_main.scss';
+//import '../scss/coming_soon/_main.scss';
 /* eslint-enable */
 
 

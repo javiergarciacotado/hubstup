@@ -3,9 +3,10 @@ import {Link} from 'react-router';
 
 class HomePage extends React.Component {
   render() {
+    /*
     return (
-      <div className="jumbotron">
-        <h2>Up in the sky, look:</h2>
+      <div id="hero">
+        <h1 className="hero-text animated fadeInDown">Up in the sky, look:</h1>
         <h3> It's a bird. It's a plane. It's <strike>Superman</strike> a Startup!</h3>
         <div className="lead">
           <div className="row">
@@ -33,6 +34,35 @@ class HomePage extends React.Component {
         </div>
       </div>
     );
+    */
+
+    return (
+      <div id="hero">
+        <div className="container">
+          <h1 className="hero-text animated fadeInDown">
+            Up in the sky, look:
+          </h1>
+          <p className="sub-text animated fadeInDown">
+            It's a bird. It's a plane. It's <strike>Superman</strike> a Startup!
+          </p>
+          <div claclassNamess="container">
+            <div className="row">
+              <div className="col-md-12">
+                <form>
+                  <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Look for a startup, a technology, an industry..." />
+                      <span className="input-group-btn">
+                        <button className="btn btn-primary" type="button">Search</button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+
   }
 }
 

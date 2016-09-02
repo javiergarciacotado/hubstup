@@ -2,11 +2,11 @@
 	height: 100%;
 	background-attachment: fixed !important;
 
-	background: #5E7A9B;
-	background: -webkit-linear-gradient(top, #355069 0, #5E7A9B 100%);
-	background: -moz-linear-gradient(top, #355069 0, #5E7A9B 100%);
-	background: -o-linear-gradient(top, #355069 0, #5E7A9B 100%);
-	background: linear-gradient(top, #355069 0, #5E7A9B 100%);
+	background: #EEEEEE; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)); /* For Safari 5.1 to 6.0 */
+	background: -moz-linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)); /* For Firefox 3.6 to 15 */
+	background: -o-linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.3)); /* Standard syntax */
 	-webkit-font-smoothing: antialiased;
 
 	.header {
@@ -14,14 +14,14 @@
 		.logo {
 			margin-top: 40px;
 			text-align: center;
-			
+
 			a {
 				color: #fff;
 				font-size: 31px;
 				font-family: $lato;
 				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 				@include transition(color .25s linear);
-				
+
 				&:hover {
 					text-decoration: none;
 					color: #bbb;
@@ -30,7 +30,7 @@
 		}
 
 		h4 {
-			color: #fff;
+			color: #1B5E20;
 			text-align: center;
 			font-size: 28px;
 			font-weight: 400;
@@ -40,11 +40,11 @@
 		}
 
 		p {
-			color: #fff;
+			color: #388E3C;
 			text-align: center;
 		}
 	}
-	
+
 	.wrapper {
 		margin: 0 auto;
 		width: 51%;
@@ -52,7 +52,7 @@
 		background: #fff;
 		padding: 15px 50px 25px 50px;
 		border-radius: 5px;
-		border-top: 6px solid #6ED5E4;
+		border-top: 6px solid #4CAF50;
 
 		@media(max-width: 991px) {
 			width: 67%;
@@ -137,13 +137,13 @@
 	}
 	.already-account {
 		text-align: center;
-		color: #fff;
+		color: #388E3C;
 		margin-top: 25px;
 		margin-bottom: 70px;
 		font-size: 13px;
 		font-weight: 500;
 		a {
-			color: #fff;
+			color: #4CAF50;
 			text-decoration: underline;
 		}
 		.popover-content {
@@ -153,5 +153,3 @@
 		}
 	}
 }
-
-

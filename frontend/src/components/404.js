@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-import '../scss/_404.scss';
+//import '../scss/_404.scss';
 
 const NotFound = () => {
   return (
