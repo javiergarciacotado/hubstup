@@ -1,17 +1,45 @@
 $icon-font-path: "../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 // PCA: HUBSTUP's styles
-$navbar-default-bg: #4CAF50;
-$navbar-default-link-color: #fff;
+//$navbar-default-bg: #4CAF50;
+//$navbar-default-link-color: #fff;
+$navbar-default-bg: #fff;
+$navbar-default-link-color: #2196F3;
+
 $jumbotron-bg: rgba(165, 214, 167, 0.8);
 $panel-bg: rgba(238, 238, 238, 0.7);
 $panel-default-heading-bg: rgba(238, 238, 238, 0.8);
 
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap-compass.scss';
-/*
-@import "coming_soon/vendor/flipclock.css";
-@import "coming_soon/vendor/ionicons.min.css";
-*/
+
+/* modules */
+@import "modules/mixins";
+@import "modules/elements";
+
+/* vendor */
+@import "bootstrap-overrides";
+@import "vendor/flipclock.css";
+@import "vendor/ionicons.min.css";
+
+/* config variables */
+@import "config";
+
+/* pages */
+@import "pages/404";
+@import "pages/coming_soon";
+@import "pages/index";
+@import "pages/signup";
+
+#coming-soon {
+  position:fixed;
+  left: 0px;
+  top: 0px;
+  width:100%; height:100%;
+  -webkit-user-select: none; -khtml-user-select: none;
+  -moz-user-select: none; -o-user-select: none; user-select: none;
+}
+
+
 body {
   padding: 0;
 }
@@ -118,8 +146,13 @@ body {
   left: 0px;
   top: 0px;
   background-size:100%;
+  background-repeat: no-repeat;
+
   width:100%; height:100%;
   -webkit-user-select: none; -khtml-user-select: none;
   -moz-user-select: none; -o-user-select: none; user-select: none;
   z-index:-1;
+  @media(max-width: 991px) {
+    display: none;
+  }
 }

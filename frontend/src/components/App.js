@@ -15,6 +15,7 @@ class App extends React.Component {
   }
 
   render() {
+    /*
     return (
       <div className="container-fluid">
         <div className="header">
@@ -22,6 +23,17 @@ class App extends React.Component {
         </div>
         <div id="background"></div>
         <div className="container">
+          {this.props.children}
+        </div>
+      </div>
+    );
+    */
+    return (
+      <div className="container-fluid">
+        <div className="header">
+          <Header loading={this.props.loading} />
+        </div>
+        <div className="hero">
           {this.props.children}
         </div>
       </div>
