@@ -1,0 +1,155 @@
+#signup {
+	height: 100%;
+	background-attachment: fixed !important;
+
+	background: #EEEEEE; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)); /* For Safari 5.1 to 6.0 */
+	background: -moz-linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)); /* For Firefox 3.6 to 15 */
+	background: -o-linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(top, rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.3)); /* Standard syntax */
+	-webkit-font-smoothing: antialiased;
+
+	.header {
+
+		.logo {
+			margin-top: 40px;
+			text-align: center;
+
+			a {
+				color: #fff;
+				font-size: 31px;
+				font-family: $lato;
+				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+				@include transition(color .25s linear);
+
+				&:hover {
+					text-decoration: none;
+					color: #bbb;
+				}
+			}
+		}
+
+		h4 {
+			color: #1B5E20;
+			text-align: center;
+			font-size: 28px;
+			font-weight: 400;
+			font-family: $myriad;
+			margin-top: 45px;
+			margin-bottom: 5px;
+		}
+
+		p {
+			color: #388E3C;
+			text-align: center;
+		}
+	}
+
+	.wrapper {
+		margin: 0 auto;
+		width: 51%;
+		margin-top: 25px;
+		background: #fff;
+		padding: 15px 50px 25px 50px;
+		border-radius: 5px;
+		border-top: 6px solid #4CAF50;
+
+		@media(max-width: 991px) {
+			width: 67%;
+		}
+
+		@media(max-width: 767px) {
+			width: 100%;
+		}
+
+		.formy {
+			margin-top: 22px;
+			.form-group {
+				label {
+					color: #46515F;
+				}
+			}
+			.checkbox {
+				label {
+					color: #666;
+					font-size: 13px;
+				}
+				input {
+					position: relative;
+					top: -1px;
+				}
+			}
+			.submit {
+				text-align: center;
+				.button-clear {
+					margin-top: 35px;
+					display: inline-block;
+				}
+			}
+			.info {
+				float: right;
+				width: 67%;
+				.good-company {
+					strong {
+						font-size: 15px;
+						font-weight: 500;
+					}
+					p {
+						color: #858585;
+						margin-top: 9px;
+					}
+				}
+				.testimonial {
+					margin-top: 40px;
+					.quote {
+						font-style: italic;
+						font-size: 13px;
+						color: #555;
+						line-height: 20px;
+						-webkit-font-smoothing: auto;
+					}
+					.author {
+						margin-top: 20px;
+						.pic {
+							width: 55px;
+							height: 55px;
+							border-radius: 50px;
+							float: left;
+							position: relative;
+							top: -6px;
+							margin-right: 18px;
+						}
+						.name {
+							color: #3C92C5;
+							line-height: 23px;
+							font-weight: 500;
+						}
+						.company {
+							font-size: 14px;
+							color: #909090;
+							line-height: 23px;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+	}
+	.already-account {
+		text-align: center;
+		color: #388E3C;
+		margin-top: 25px;
+		margin-bottom: 70px;
+		font-size: 13px;
+		font-weight: 500;
+		a {
+			color: #4CAF50;
+			text-decoration: underline;
+		}
+		.popover-content {
+			color: #000;
+			font-size: 17px;
+			font-weight: 400;
+		}
+	}
+}

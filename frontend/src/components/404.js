@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router';
 
+//import '../scss/_404.scss';
+
 const NotFound = () => {
   return (
-    <div id="not-found" className="not-found-page">
+    <div className="jumbotron">
       <div className="info">
         <h1>404</h1>
         <p>The page you're looking for doesn't exist.</p>

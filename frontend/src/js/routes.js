@@ -1,14 +1,26 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from '../components/App';
-import Signin from '../components/Signin';
-import Signup from '../components/Signup';
-import NotFound from '../components/404';
+import HomePage from '../components/home/HomePage';
+import AboutPage from '../components/about/AboutPage';
+import StartupsPage from '../components/startup/StartupsPage';
+import ComingSoon from '../components/ComingSoon';
+import ManageStartupPage from '../components/startup/ManageStartupPage';
+import NotFoundPage from '../components/404';
+import SignIn from '../components/auth/Signin';
+import SignUp from '../components/auth/Signup';
 
-export default(
-  <Route path="/" name="app" component={App}>
-    <Route path="/signin" name="signin" component={Signin} />
-    <Route path="/signup" name="signup" component={Signup} />
-    <Route path="not-found" name="not-found" component={NotFound} />
+export default (
+  <Route path="/" component={App}>
+    <IndexRoute component={HomePage} />
+    <Route path="startups" component={StartupsPage} />
+    <Route path="startup" component={ManageStartupPage} />
+    <Route path="startup/:id" component={ManageStartupPage} />
+    <Route path="about" component={AboutPage} />
+    <Route path="comingsoon" component={ComingSoon} />
+    <Route path="signin" component={SignIn} />
+    <Route path="signup" component={SignUp} />
+    <Route path="*" component={NotFoundPage}/>
+
   </Route>
 );
